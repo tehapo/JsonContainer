@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.vaadin.teemu.jsoncontainer</groupId>
+	<artifactId>JsonContainer</artifactId>
+	<packaging>jar</packaging>
+	<version>0.1</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.author>Teemu Pöntelin / Vaadin Ltd</project.author>
+		<project.license>Apache License 2.0</project.license>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<configuration>
+						<archive>
+							<index>true</index>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							</manifest>
+							<manifestEntries>
+								<Vaadin-Package-Version>1</Vaadin-Package-Version>
+								<Vaadin-License-Title>${project.license}</Vaadin-License-Title>
+								<Implementation-Vendor>${project.author}</Implementation-Vendor>
+								<Implementation-Title>${project.artifactId}</Implementation-Title>
+							</manifestEntries>
+						</archive>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin</artifactId>
+			<version>6.6.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+</project>
